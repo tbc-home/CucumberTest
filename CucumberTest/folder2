@@ -1,0 +1,122 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Verify Login to system",
+        "description": "",
+        "id": "cucumber-new-solution-login;verify-login-to-system",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2289468,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Verify login page open",
+            "match": {
+              "location": "cucumberReport.openBrowser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 680642,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Login controls are avaliable",
+            "match": {
+              "location": "cucumberReport.login_controls_are_avaliable()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4685202860,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Login sucessfully",
+            "match": {
+              "location": "cucumberReport.loginButton()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@task1"
+          },
+          {
+            "name": "@door"
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Sign-in to facility",
+        "description": "",
+        "id": "cucumber-new-solution-login;sign-in-to-facility",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 564465,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Verify login page open",
+            "match": {
+              "location": "cucumberReport.openBrowser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1508249,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Login controls are avaliable",
+            "match": {
+              "location": "cucumberReport.login_controls_are_avaliable()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NoSuchMethodError: org.apache.poi.util.POILogger.log(ILjava/lang/Object;)V\r\n\tat org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:304)\r\n\tat org.apache.poi.openxml4j.opc.PackageRelationshipCollection.\u003cinit\u003e(PackageRelationshipCollection.java:156)\r\n\tat org.apache.poi.openxml4j.opc.PackageRelationshipCollection.\u003cinit\u003e(PackageRelationshipCollection.java:124)\r\n\tat org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:559)\r\n\tat org.apache.poi.openxml4j.opc.PackagePart.\u003cinit\u003e(PackagePart.java:112)\r\n\tat org.apache.poi.openxml4j.opc.PackagePart.\u003cinit\u003e(PackagePart.java:83)\r\n\tat org.apache.poi.openxml4j.opc.PackagePart.\u003cinit\u003e(PackagePart.java:128)\r\n\tat org.apache.poi.openxml4j.opc.ZipPackagePart.\u003cinit\u003e(ZipPackagePart.java:78)\r\n\tat org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:188)\r\n\tat org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:623)\r\n\tat org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:230)\r\n\tat org.apache.poi.util.PackageHelper.open(PackageHelper.java:39)\r\n\tat org.apache.poi.xssf.usermodel.XSSFWorkbook.\u003cinit\u003e(XSSFWorkbook.java:187)\r\n\tat common.ExcelProcessing.findCell(ExcelProcessing.java:84)\r\n\tat common.MenuNavigation.menuNav(MenuNavigation.java:20)\r\n\tat cucumberReport.cucumberReport.forgotPWD(cucumberReport.java:80)\r\n\tat ✽.Sign to facility sucessfully(src/test/java/cucumberReport/cucumberReport.feature:15)\r\n",
+              "duration": 21808145285,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "Sign to facility sucessfully",
+            "match": {
+              "location": "cucumberReport.forgotPWD()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@task2"
+          },
+          {
+            "name": "@door"
+          }
+        ]
+      }
+    ],
+    "name": "Cucumber New Solution Login",
+    "description": "",
+    "id": "cucumber-new-solution-login",
+    "keyword": "Feature",
+    "uri": "src/test/java/cucumberReport/cucumberReport.feature",
+    "tags": []
+  }
+]

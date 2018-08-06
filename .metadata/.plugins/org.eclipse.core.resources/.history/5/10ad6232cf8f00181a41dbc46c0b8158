@@ -1,0 +1,12 @@
+package annotation;
+
+import org.junit.runner.RunWith;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(plugin = { "junit:new_folder2" }, features = "src/test/java/annotation")
+
+public class runTest {
+}

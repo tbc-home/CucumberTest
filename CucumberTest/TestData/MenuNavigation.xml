@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Menu-Detail xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Menu_ID id="ProductOption">
+		<Tab>FACILITY</Tab>
+		<Menu_Level_1>Dashboard</Menu_Level_1>
+		<Menu_Level_2>Product Options</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="DashBoardMaster">
+		<Tab>FACILITY</Tab>
+		<Menu_Level_1>Dashboard</Menu_Level_1>
+		<Menu_Level_2>Dashboard Master</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Snapshot">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Snapshot</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="RESIDENT">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Registration</Menu_Level_2>
+		<Menu_Level_3>Inpatient</Menu_Level_3>
+	</Menu_ID>
+	<Menu_ID id="Care Plan">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>CHARTING</Menu_Level_1>
+		<Menu_Level_2>Care Plan</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="ProductOptionFacility">
+		<Tab>FACILITY</Tab>
+		<Menu_Level_1>Facility</Menu_Level_1>
+		<Menu_Level_2>Facility Profiles</Menu_Level_2>
+		<Menu_Level_3>Product Options</Menu_Level_3>
+		<Xpath>../PRODUCTOPTIONS/PRODUCTOPTION.HTM</Xpath>
+	</Menu_ID>
+	<Menu_ID id="Security">
+		<Tab>USER</Tab>
+		<Menu_Level_1>Security Manager</Menu_Level_1>
+		<Menu_Level_2>Security</Menu_Level_2>
+		<Xpath>../SM/SECURITY.ASPX</Xpath>
+	</Menu_ID>
+	<Menu_ID id="Care Conference Letters">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>CHARTING</Menu_Level_1>
+		<Menu_Level_2>Care Conference Letters</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="LetterTemplate">
+		<Tab>FACILITY</Tab>
+		<Menu_Level_1>Care Plan</Menu_Level_1>
+		<Menu_Level_2>Letter Template</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Licensing">
+		<Tab>USER</Tab>
+		<Menu_Level_1>Security Manager</Menu_Level_1>
+		<Menu_Level_2>Licensing</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="SelectPatient">
+		<Tab>RESIDENT</Tab>
+	</Menu_ID>
+	<Menu_ID id="Care Plan Library">
+		<Tab>FACILITY</Tab>
+		<Menu_Level_1>Care Plan</Menu_Level_1>
+		<Menu_Level_2>Care Plan Library</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="ResidentSettings">
+		<Tab>RESIDENT</Tab>
+	</Menu_ID>
+	<Menu_ID id="ADTInPatient">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Registration</Menu_Level_2>
+		<Menu_Level_3>Inpatient</Menu_Level_3>
+		<Xpath>../ADT/BASICINFORMATION.ASPX?VISITTYPE=INPATIENT</Xpath>
+	</Menu_ID>
+	<Menu_ID id="Discharge">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Discharge</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="CarePlanReport">
+		<Tab>REPORTS</Tab>
+		<Menu_Level_1>Reports</Menu_Level_1>
+		<Menu_Level_2>Clinical Reports</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Groups">
+		<Tab>USER</Tab>
+		<Menu_Level_1>Security Manager</Menu_Level_1>
+		<Menu_Level_2>Groups</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Users">
+		<Tab>USER</Tab>
+		<Menu_Level_1>Security Manager</Menu_Level_1>
+		<Menu_Level_2>Users</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Enterprise">
+		<Tab>USER</Tab>
+		<Menu_Level_1>Security Manager</Menu_Level_1>
+		<Menu_Level_2>Enterprise Login</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="AllergyReactions">
+		<Tab>SYSTEM</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Allergy Reactions</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="ClinicianFacility">
+		<Tab>FACILITY</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Clinicians</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Clinician type master">
+		<Tab>SYSTEM</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Clinician Types Master</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="ICD-10 Master">
+		<Tab>SYSTEM</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>ICD-10 Master</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Allergy Master">
+		<Tab>SYSTEM</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Allergy Master</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Advance Directives">
+		<Tab>SYSTEM</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Advance Directives</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="ProspectAdt">
+		<Tab>PROSPECT</Tab>
+		<Menu_Level_1>PROSPECTS</Menu_Level_1>
+		<Menu_Level_2>Pre-Registration</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Prospect">
+		<Tab>PROSPECT</Tab>
+	</Menu_ID>
+	<Menu_ID id="ADTOutpatient">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Registration</Menu_Level_2>
+		<Menu_Level_3>Outpatient</Menu_Level_3>
+	</Menu_ID>
+	<Menu_ID id="CloseProspect">
+		<Tab>PROSPECT</Tab>
+		<Menu_Level_1>PROSPECTS</Menu_Level_1>
+		<Menu_Level_2>Close Prospect</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Transfer">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Transfer</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Hold">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Hold</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="LocationMaster">
+		<Tab>FACILITY</Tab>
+		<Menu_Level_1>Facility Profiles</Menu_Level_1>
+		<Menu_Level_2>Location Master</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="Reserve">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>ADT</Menu_Level_1>
+		<Menu_Level_2>Reserve</Menu_Level_2>
+	</Menu_ID>
+	<Menu_ID id="SignOff">
+		<Tab>RESIDENT</Tab>
+		<Menu_Level_1>Sign Out</Menu_Level_1>
+	</Menu_ID>
+</Menu-Detail>

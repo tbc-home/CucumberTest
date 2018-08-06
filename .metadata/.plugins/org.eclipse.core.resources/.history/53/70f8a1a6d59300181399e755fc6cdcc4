@@ -1,0 +1,140 @@
+
+import java.util.List;
+
+import org.testng.TestNG;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import org.testng.collections.Lists;
+
+import common.Config;
+import common.CustomReporter;
+import common.CustomReporter.status;
+import common.Login;
+import common.MenuNavigation;
+
+@Listeners(common.Listener.class)
+// @Test(groups = "CampaignLogin")
+public class CampaignLogin {
+
+	public static void main(String[] args) {
+		try {
+			TestNG testng = new TestNG();
+			List<String> suites = Lists.newArrayList();
+			suites.add("Resources/testng.xml");
+			testng.setTestSuites(suites);
+			testng.run();
+		} catch (Exception ex) {
+			CustomReporter.MessageLogger(ex.getMessage(), status.Fatal);
+		}
+	}
+
+	@Test(priority = 1, groups = "CampaignLogin")
+	public static void LoginEnv() throws Exception {
+		try {
+			Login objLogin = new Login();
+			objLogin.initlogin(Config.props.getProperty("user"), Config.props.getProperty("password"), true);
+		} catch (Exception e) {
+		}
+		// Search_Select_Resident ssr_obj = new Search_Select_Resident();
+		// ssr_obj.Search_Resident("", "");
+		// PhysicianOrderTestCases po = new PhysicianOrderTestCases();
+		// po.quickEntry();
+		//
+		// Search_Select_Resident ssr_obj = new Search_Select_Resident();
+		// ssr_obj.Search_Resident("", "");
+		//
+		// ClinicialSettings obj = new ClinicialSettings();
+		// obj.setClinicianFacility();
+		// //
+		// ClinicalPage cp_obj = new ClinicalPage("Inpatient");
+		// cp_obj.navigateToClinical();
+		// cp_obj.setClinical();
+
+		// HashTableRepository.setHash("MainWindow",
+		// CommonLib.GetDriver().getWindowHandle().toString());
+
+		// AddProblemGoalIntTestCases obj = new AddProblemGoalIntTestCases();
+		// obj.addDeleteProblemGoalIntervention();
+		;
+	}
+
+	// @AfterTest(alwaysRun = true)
+	// public void removeUser() {
+	// if (HashTableRepository.findHash("groupDescription")) {
+	// // Login lObj = new Login();
+	// // lObj.logout();
+	// // lObj.initlogin(Config.props.getProperty("user"),
+	// // Config.props.getProperty("password"), false);
+	// Groups obj = new Groups();
+	// obj.removeGroupUser();
+	// }
+	// }
+	@Test(priority = 2, enabled = false)
+	public static void menuCheck() {
+
+		// MenuNavigation.menuNav("OnlyFacility");
+		MenuNavigation.menuNav("CarePlanReport");
+		MenuNavigation.menuNav("IPNReports");
+		MenuNavigation.menuNav("ADTReportsCensus");
+		MenuNavigation.menuNav("RAMReportsFinancial");
+		MenuNavigation.menuNav("IPNTest");
+
+		// MenuNavigation.menuNav("DashBoardProductOptions");
+		// MenuNavigation.menuNav("ProductOption");
+		// MenuNavigation.menuNav("ProductOptionFacility");
+		// MenuNavigation.menuNav("DashBoardMaster");
+
+		// MenuNavigation.menuNav("LetterTemplate");
+		// MenuNavigation.menuNav("Care Plan Library");
+		// MenuNavigation.menuNav("ClinicianFacility");
+		// MenuNavigation.menuNav("LocationMaster");
+		// MenuNavigation.menuNav("ExportImportIpn");
+		// MenuNavigation.menuNav("ReasonForStrike");
+		// MenuNavigation.menuNav("IPNGuidelineMaster");
+
+		// MenuNavigation.menuNav("IPNLibrary");
+		// MenuNavigation.menuNav("TimeCode");
+		// MenuNavigation.menuNav("IncidentLocationMaster");
+		// MenuNavigation.menuNav("IncidentTypeMaster");
+		// MenuNavigation.menuNav("DashboardMaster");
+
+		// MenuNavigation.menuNav("ADTProspect");
+		// MenuNavigation.menuNav("Prospect");
+		// MenuNavigation.menuNav("CloseProspect");
+
+		// MenuNavigation.menuNav("Snapshot");
+		// MenuNavigation.menuNav("RESIDENT");
+		// MenuNavigation.menuNav("Care Plan");
+		// MenuNavigation.menuNav("Care Conference Letters");
+		// MenuNavigation.menuNav("SelectPatient");
+		// MenuNavigation.menuNav("ResidentSettings");
+		// MenuNavigation.menuNav("ADTInpatient");
+		// MenuNavigation.menuNav("Discharge");
+		// MenuNavigation.menuNav("ADTOutpatient");
+		// MenuNavigation.menuNav("Transfer");
+		// MenuNavigation.menuNav("Hold");
+		// MenuNavigation.menuNav("Reserve");
+		// MenuNavigation.menuNav("IPNResident");
+		// MenuNavigation.menuNav("Vitals");
+		// MenuNavigation.menuNav("IncidentTrack");
+		// MenuNavigation.menuNav("ResidentInfection");
+		// MenuNavigation.menuNav("IncidentTrackAccess");
+		// MenuNavigation.menuNav("IncidentTrack");
+		// MenuNavigation.menuNav("NoAccessCheck");
+		// MenuNavigation.menuNav("DashboardCurrent");
+		// MenuNavigation.menuNav("AllergyReactions");
+		// MenuNavigation.menuNav("Clinician type master");
+		// MenuNavigation.menuNav("ICD-10 Master");
+		// MenuNavigation.menuNav("Allergy Master");
+		// MenuNavigation.menuNav("Advance Directives");
+		// MenuNavigation.menuNav("VitalPage");
+		// MenuNavigation.menuNav("Security");
+		// MenuNavigation.menuNav("Licensing");
+		// MenuNavigation.menuNav("Groups");
+		// MenuNavigation.menuNav("Users");
+		// MenuNavigation.menuNav("Enterprise");
+		// MenuNavigation.menuNav("ResetCharge");
+		// MenuNavigation.menuNav("Charging");
+	}
+
+}

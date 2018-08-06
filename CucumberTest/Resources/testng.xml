@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+   		<class name="CampaignLogin"/>	
+		<class name="CampaignADT"/> 
+  		<class name="CampaignCarePlan"/> 
+  		<class name="CampaignIPN"/> 
+	  	<class name="CampaignVitals"/> 
+		<class name="CampaignQA"/>
+		<class name="CampaignQAInfection"/>
+		<class name="CampaignIncidentSecurity"/> 
+		<class name="CampaignInfectionSecurity"/> 
+		<class name="CampaignReports"/> 
+	    <class name="CampaignDischarge"/>  	
+	     <class name="CampaignVitalDashboard"/> 
+    </classes>
+  </test>
+    
+</suite>
