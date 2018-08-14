@@ -73,7 +73,8 @@ public class TableActions {
 		String afterEdit = data + " " + "Edit";
 		int rowIndex = findDataIndex(elementId, rowCount, data);
 
-		String editButton = "//td/span[@id='" + elementId + rowIndex + "']//parent::td//parent::tr/td/input[contains(@src,'../images/grid/icon-edit-18x17.gif')]";
+		String editButton = "//td/span[@id='" + elementId + rowIndex
+				+ "']//parent::td//parent::tr/td/input[contains(@src,'../images/grid/icon-edit-18x17.gif')]";
 
 		CommonLib.clickButton(By.xpath(editButton));
 		if (flag1 == 0) {
@@ -115,7 +116,7 @@ public class TableActions {
 		boolean flag = false;
 
 		for (WebElement l1 : dataList) {
-			String tem = l1.getText();
+			// String tem = l1.getText();
 			if (l1.getText().equalsIgnoreCase(data) || l1.getText().toLowerCase().contains(data.toLowerCase())) {
 
 				flag = true;
@@ -182,7 +183,8 @@ public class TableActions {
 
 		int rowIndex = findDataIndex(elementId, rowCount, data);
 		rowIndex = rowIndex + 2;
-		String deleteButton = tableXpathRow + "[" + rowIndex + "]/td[2]/input[@src='../images/grid/icon-delete-18x17.gif']";
+		String deleteButton = tableXpathRow + "[" + rowIndex
+				+ "]/td[2]/input[@src='../images/grid/icon-delete-18x17.gif']";
 
 		CommonLib.clickButton(By.xpath(deleteButton));
 		CommonLib.setFrame(By.xpath("//*[@id='iframeDialog0']"));
