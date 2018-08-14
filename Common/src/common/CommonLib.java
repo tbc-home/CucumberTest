@@ -50,8 +50,8 @@ public class CommonLib {
 	public static boolean PatAdmited = true;
 
 	/*
-	 * Function Name : setVersion Parameter : Version Detail as String Created
-	 * By : Tarun Gupta Purpose : Save the version for later use
+	 * Function Name : setVersion Parameter : Version Detail as String Created By :
+	 * Tarun Gupta Purpose : Save the version for later use
 	 */
 	public static void setVersion(String strVersion) {
 		sVersion = strVersion;
@@ -132,43 +132,11 @@ public class CommonLib {
 			break;
 		case "IE":
 			DesiredCapabilities capabilities = new DesiredCapabilities();
-			// capabilities = DesiredCapabilities.INTERNETEXPLORER
-			// capabilities.setCapability("platform", "WIN8");
 			capabilities.setCapability("ignoreProtectedModeSettings", true);
 			capabilities.setCapability("IntroduceInstabilityByIgnoringProtectedModeSettings", true);
 			capabilities.setCapability("browserName", "internet explorer");
 			capabilities.setCapability("nativeEvents", true);
 
-			// Capabilities [{acceptInsecureCerts=false, browserVersion=11,
-			// se:ieOptions={nativeEvents=true, browserAttachTimeout=0.0,
-			// ie.ensureCleanSession=false, elementScrollBehavior=0.0,
-			// enablePersistentHover=true, ie.browserCommandLineSwitches=,
-			// ie.forceCreateProcessApi=false, requireWindowFocus=false,
-			// initialBrowserUrl=http://localhost:48638/,
-			// ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000.0,
-			// ignoreProtectedModeSettings=true}, browserName=internet explorer,
-			// pageLoadStrategy=normal, unhandledPromptBehavior=dismiss,
-			// javascriptEnabled=true, platformName=windows, setWindowRect=true,
-			// platform=ANY}]
-
-			// capabilities.setCapability("platform", "WIN8");
-			// capabilities.setCapability("platform", "WIN8");
-			// capabilities.setCapability("platform", "WIN8");
-			//
-			// capabilities["browserName"] = "internet explorer"
-			// capabilities["ignoreProtectedModeSettings"] = True
-			// capabilities["IntroduceInstabilityByIgnoringProtectedModeSettings"]
-			// = True
-			// capabilities["nativeEvents"] = True
-			// capabilities["ignoreZoomSetting"] = True
-			// capabilities["requireWindowFocus"] = True
-			// capabilities["INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS"]
-			// = True
-
-			// InternetExplorerOptions opsIE = new InternetExplorerOptions();
-			// opsIE.addCommandSwitches(Prefs);
-			// opsIE.addArguments("--disable-notifications");
-			// opsIE.setExperimentalOption("prefs", Prefs);
 			capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 
 			System.setProperty("webdriver.ie.driver", "Resources/Driver/IE_driver/IEDriverServer.exe");
@@ -251,9 +219,9 @@ public class CommonLib {
 	public static void staticWait(int multiplier) {
 		try {
 			Thread.sleep(interval * multiplier);
-			//Runtime runtime;
-			//runtime = Runtime.getRuntime();
-			//ResourceMonitor.printUsage(runtime);
+			// Runtime runtime;
+			// runtime = Runtime.getRuntime();
+			// ResourceMonitor.printUsage(runtime);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -336,7 +304,8 @@ public class CommonLib {
 			value_drpdwn.selectByIndex(index);
 		}
 		staticWait(1);
-		CustomReporter.MessageLogger(logFormator(dropdownID + xpath) + " : " + logFormator(String.valueOf(index) + " " + value) + " Selected !", CustomReporter.status.Information);
+		CustomReporter.MessageLogger(logFormator(dropdownID + xpath) + " : "
+				+ logFormator(String.valueOf(index) + " " + value) + " Selected !", CustomReporter.status.Information);
 	}
 
 	// to get no of elements in a drop down
@@ -389,7 +358,10 @@ public class CommonLib {
 				int randomIndex = new Random().nextInt(dropList.size() - 2);
 				randomIndex++;
 				if (!(dropList.get(randomIndex).getText().equals(""))) {
-					CustomReporter.MessageLogger("Dropdown " + logFormator(elementAddress.toString()) + " Selected " + logFormator(dropList.get(randomIndex).getText()) + ".", CustomReporter.status.Information);
+					CustomReporter.MessageLogger(
+							"Dropdown " + logFormator(elementAddress.toString()) + " Selected "
+									+ logFormator(dropList.get(randomIndex).getText()) + ".",
+							CustomReporter.status.Information);
 					text = dropList.get(randomIndex).getText();
 					// Have to remove
 					if (text.equals("Pharmacy")) {
@@ -399,13 +371,16 @@ public class CommonLib {
 				}
 			} else {
 				if (dropList.size() == 2) {
-					CustomReporter.MessageLogger("Dropdown " + logFormator(elementAddress.toString()) + logFormator(dropList.get(1).getText()) + ".", CustomReporter.status.Information);
+					CustomReporter.MessageLogger("Dropdown " + logFormator(elementAddress.toString())
+							+ logFormator(dropList.get(1).getText()) + ".", CustomReporter.status.Information);
 					text = dropList.get(1).getText();
 					se.selectByIndex(1);
 				} else {
 
 					if ((dropList.get(0).getText().equals(""))) {
-						CustomReporter.MessageLogger("Dropdown " + logFormator(elementAddress.toString()) + " Selected Blank.", CustomReporter.status.Information);
+						CustomReporter.MessageLogger(
+								"Dropdown " + logFormator(elementAddress.toString()) + " Selected Blank.",
+								CustomReporter.status.Information);
 						text = dropList.get(0).getText();
 					}
 				}
@@ -419,7 +394,8 @@ public class CommonLib {
 		Select select = new Select(sDriver.findElement(dropDownPath));
 		select.selectByVisibleText(value);
 		staticWait(1);
-		CustomReporter.MessageLogger(dropDownPath + " : " + logFormator(" " + value) + " Selected !", CustomReporter.status.Information);
+		CustomReporter.MessageLogger(dropDownPath + " : " + logFormator(" " + value) + " Selected !",
+				CustomReporter.status.Information);
 	}
 
 	// to set a value of a drop down by drop down path or value
@@ -427,7 +403,8 @@ public class CommonLib {
 		Select select = new Select(sDriver.findElement(dropDownPath));
 		select.selectByValue(value);
 		staticWait(1);
-		CustomReporter.MessageLogger(dropDownPath + " : " + logFormator(" " + value) + " Selected !", CustomReporter.status.Information);
+		CustomReporter.MessageLogger(dropDownPath + " : " + logFormator(" " + value) + " Selected !",
+				CustomReporter.status.Information);
 	}
 
 	public static void OperateInWindow(By elementLocator) {
@@ -559,14 +536,16 @@ public class CommonLib {
 	public static String getText(By elementxpath) {
 		staticWait(1);
 		String elementtext = sDriver.findElement(elementxpath).getText();
-		CustomReporter.MessageLogger(logFormator(elementxpath.toString()) + " : " + logFormator(elementtext), CustomReporter.status.Information);
+		CustomReporter.MessageLogger(logFormator(elementxpath.toString()) + " : " + logFormator(elementtext),
+				CustomReporter.status.Information);
 		return elementtext;
 	}
 
 	// to get the value of the text by its xpath
 	public static String getValue(By elementxpath) {
 		String elementtext = sDriver.findElement(elementxpath).getAttribute("value");
-		CustomReporter.MessageLogger(elementxpath + " : " + logFormator(elementtext), CustomReporter.status.Information);
+		CustomReporter.MessageLogger(elementxpath + " : " + logFormator(elementtext),
+				CustomReporter.status.Information);
 		return elementtext;
 	}
 
@@ -583,7 +562,8 @@ public class CommonLib {
 		if (ControlID == "txtPassword") {
 			sData = "********";
 		}
-		CustomReporter.MessageLogger(xpath + ControlID + " : " + logFormator(sData) + " !", CustomReporter.status.Information);
+		CustomReporter.MessageLogger(xpath + ControlID + " : " + logFormator(sData) + " !",
+				CustomReporter.status.Information);
 		staticWait(1);
 		return sData;
 	}
@@ -615,7 +595,8 @@ public class CommonLib {
 		if (txt.equals("") || txt == null) {
 			txt = elementLocator.toString();
 		}
-		CustomReporter.MessageLogger("In Text Box " + logFormator(txt) + " set value " + " " + logFormator(data) + "!", CustomReporter.status.Information);
+		CustomReporter.MessageLogger("In Text Box " + logFormator(txt) + " set value " + " " + logFormator(data) + "!",
+				CustomReporter.status.Information);
 		return data;
 	}
 
@@ -689,7 +670,9 @@ public class CommonLib {
 		} catch (Exception e) {
 			// System.out.print(e.getMessage());
 		}
-		CustomReporter.MessageLogger("As per flag: " + logFormator(String.valueOf(flag)) + " date is " + logFormator(ds) + "", CustomReporter.status.Information);
+		CustomReporter.MessageLogger(
+				"As per flag: " + logFormator(String.valueOf(flag)) + " date is " + logFormator(ds) + "",
+				CustomReporter.status.Information);
 		if (flag == 0) {
 			return ds;
 		} else {
@@ -719,7 +702,8 @@ public class CommonLib {
 		try {
 			objdate = new SimpleDateFormat("MM/dd/yyyy").parse(datestring);
 		} catch (Exception e) {
-			CustomReporter.MessageLogger("An exception occured while converting the string date in to DATE" + e, CustomReporter.status.Information);
+			CustomReporter.MessageLogger("An exception occured while converting the string date in to DATE" + e,
+					CustomReporter.status.Information);
 		}
 		return objdate;
 	}
@@ -792,7 +776,9 @@ public class CommonLib {
 			i++;
 		}
 		staticWait(1);
-		CustomReporter.MessageLogger(logFormator(elementLocator.toString()) + " with Text " + txt + " : " + " Clicked !", CustomReporter.status.Information);
+		CustomReporter.MessageLogger(
+				logFormator(elementLocator.toString()) + " with Text " + txt + " : " + " Clicked !",
+				CustomReporter.status.Information);
 	}
 
 	public static void expectedComdition(By locator, int time) {
@@ -827,7 +813,8 @@ public class CommonLib {
 		if (enabled_status == true) {
 			radio.click();
 			staticWait(1);
-			CustomReporter.MessageLogger("Radio Button clicked! " + logFormator(radio.toString()) + "", CustomReporter.status.Information);
+			CustomReporter.MessageLogger("Radio Button clicked! " + logFormator(radio.toString()) + "",
+					CustomReporter.status.Information);
 		}
 	}
 
@@ -916,7 +903,8 @@ public class CommonLib {
 		case 1: // String
 			String Letters = RandomStringUtils.randomAlphabetic(var);
 			if (var > Config.props.getProperty("TextPre").length() + 2) {
-				opstrnum = Config.props.getProperty("TextPre") + "_" + Letters.substring(Config.props.getProperty("TextPre").length() + 1);
+				opstrnum = Config.props.getProperty("TextPre") + "_"
+						+ Letters.substring(Config.props.getProperty("TextPre").length() + 1);
 			} else
 				opstrnum = Letters;
 			break;
@@ -1011,7 +999,8 @@ public class CommonLib {
 				if (!(windowLocator.equals(""))) {
 					CommonLib.switchWindow(windowLocator);
 
-					CustomReporter.MessageLogger(logFormator(ReportName) + " could not be saved on IE.", CustomReporter.status.Warning);
+					CustomReporter.MessageLogger(logFormator(ReportName) + " could not be saved on IE.",
+							CustomReporter.status.Warning);
 
 					sDriver.close();
 				}
@@ -1033,7 +1022,8 @@ public class CommonLib {
 						staticWait(2);
 						Count++;
 						if (Count > 100) {
-							CustomReporter.MessageLogger(logFormator(ReportName) + " could not be generated.", CustomReporter.status.Fail);
+							CustomReporter.MessageLogger(logFormator(ReportName) + " could not be generated.",
+									CustomReporter.status.Fail);
 							break;
 						}
 					}
@@ -1041,8 +1031,10 @@ public class CommonLib {
 				if (pdfFileNames.length > 0) {
 					staticWait(2);
 					for (String pdfName : pdfFileNames) {
-						File reportFile = new File(HashTableRepository.getHash("ReportFolder") + "\\Reports\\" + pdfName);
-						File NewReportFile = new File(HashTableRepository.getHash("ReportFolder") + "\\Reports\\" + ReportName + ".pdf");
+						File reportFile = new File(
+								HashTableRepository.getHash("ReportFolder") + "\\Reports\\" + pdfName);
+						File NewReportFile = new File(
+								HashTableRepository.getHash("ReportFolder") + "\\Reports\\" + ReportName + ".pdf");
 						reportFile.renameTo(NewReportFile);
 					}
 				}
@@ -1145,7 +1137,8 @@ public class CommonLib {
 		staticWait(1);
 		JavascriptExecutor js = (JavascriptExecutor) sDriver;
 		String dojoValue = (String) js.executeScript("return dijit.byId('" + id + "').get('displayedValue')");
-		CustomReporter.MessageLogger("For " + id + " dropdown, list count is : " + (count - 4) + " and the selected value is : " + logFormator(dojoValue), CustomReporter.status.Information);
+		CustomReporter.MessageLogger("For " + id + " dropdown, list count is : " + (count - 4)
+				+ " and the selected value is : " + logFormator(dojoValue), CustomReporter.status.Information);
 		return dojoValue;
 	}
 
@@ -1174,7 +1167,8 @@ public class CommonLib {
 		staticWait(1);
 		JavascriptExecutor js = (JavascriptExecutor) sDriver;
 		String dojoValue = (String) js.executeScript("return dijit.byId('" + id + "').get('displayedValue')");
-		CustomReporter.MessageLogger("For " + id + " dropdown, list count is : " + (count - 4) + " and the selected value is : " + logFormator(dojoValue), CustomReporter.status.Information);
+		CustomReporter.MessageLogger("For " + id + " dropdown, list count is : " + (count - 4)
+				+ " and the selected value is : " + logFormator(dojoValue), CustomReporter.status.Information);
 		return dojoValue;
 	}
 
@@ -1214,7 +1208,8 @@ public class CommonLib {
 
 		JavascriptExecutor js = (JavascriptExecutor) CommonLib.GetDriver();
 		String dojoValue = (String) js.executeScript("return dijit.byId('" + id + "').get('displayedValue')");
-		CustomReporter.MessageLogger("For " + id + " dropdown, list count is : " + (count - 4) + " and the selected value is : " + logFormator(dojoValue), CustomReporter.status.Information);
+		CustomReporter.MessageLogger("For " + id + " dropdown, list count is : " + (count - 4)
+				+ " and the selected value is : " + logFormator(dojoValue), CustomReporter.status.Information);
 		return dojoValue;
 
 	}
@@ -1291,7 +1286,8 @@ public class CommonLib {
 		staticWait(1);
 		JavascriptExecutor js = (JavascriptExecutor) sDriver;
 		String dojoValue = (String) js.executeScript("return dijit.byId('" + id + "').get('displayedValue')");
-		CustomReporter.MessageLogger("For " + id + " dropdown, list count is : " + (count - 4) + " and the selected value is : " + logFormator(dojoValue), CustomReporter.status.Information);
+		CustomReporter.MessageLogger("For " + id + " dropdown, list count is : " + (count - 4)
+				+ " and the selected value is : " + logFormator(dojoValue), CustomReporter.status.Information);
 		return dojoValue;
 
 	}
@@ -1315,7 +1311,8 @@ public class CommonLib {
 		staticWait(1);
 		JavascriptExecutor js = (JavascriptExecutor) sDriver;
 		String dojoValue = (String) js.executeScript("return dijit.byId('" + id + "').get('displayedValue')");
-		CustomReporter.MessageLogger("For " + id + " dropdown, selected value is : " + logFormator(dojoValue), CustomReporter.status.Information);
+		CustomReporter.MessageLogger("For " + id + " dropdown, selected value is : " + logFormator(dojoValue),
+				CustomReporter.status.Information);
 		return dojoValue;
 
 	}
@@ -1473,7 +1470,8 @@ public class CommonLib {
 	// Parameter : String format
 	// Created By : Arya J Anil
 	// Purpose : RETURNS SYSTEM TIME MIN
-	public static String systemTimeAddHoursMinutes(String format, String hours, String minutes, int days, String number) {
+	public static String systemTimeAddHoursMinutes(String format, String hours, String minutes, int days,
+			String number) {
 		int intHour = Integer.parseInt(hours);
 		int intMinutes = Integer.parseInt(minutes);
 		String time = systemTimeMinusHours(format, intHour, days, number);
@@ -1516,8 +1514,10 @@ public class CommonLib {
 		// boolean bError = false;
 		try {
 			changeimplicitwait(1);
-			if ((CommonLib.getElement(By.xpath("//div[@id='" + GridName + "']//div//div[3]//span")).getText()).equals("Sorry, an error occurred")) {
-				CustomReporter.MessageLogger("Patient found in Pending Orders. Sorry an error occured! ", CustomReporter.status.Fail);
+			if ((CommonLib.getElement(By.xpath("//div[@id='" + GridName + "']//div//div[3]//span")).getText())
+					.equals("Sorry, an error occurred")) {
+				CustomReporter.MessageLogger("Patient found in Pending Orders. Sorry an error occured! ",
+						CustomReporter.status.Fail);
 				resetImplicitWait();
 				return false;
 			}
@@ -1634,7 +1634,9 @@ public class CommonLib {
 
 	public static void CheckImage(By elementLocator, String reporter) {
 		WebElement ImageFile = getElement(elementLocator);
-		Boolean ImagePresent = (Boolean) ((JavascriptExecutor) sDriver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", ImageFile);
+		Boolean ImagePresent = (Boolean) ((JavascriptExecutor) sDriver).executeScript(
+				"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",
+				ImageFile);
 		if (!ImagePresent) {
 			System.out.println("Image not displayed.");
 			CustomReporter.MessageLogger("" + reporter + " is not working properly", status.Fail);
@@ -1689,7 +1691,8 @@ public class CommonLib {
 		sDriver.switchTo().frame(string);
 		staticWait(1);
 	}
-		public static boolean checkSearchPatient() {
+
+	public static boolean checkSearchPatient() {
 		boolean flag = false;
 		List<WebElement> li = CommonLib.getElements(By.xpath("//th[contains(text(),'Patient Search')]"));
 		if (li.size() != 0) {
